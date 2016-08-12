@@ -1,0 +1,104 @@
+<div class="header">
+	<img class="photo" src="images/sweetheart.jpg"/>
+</div>
+<h1>Ihr wisst nicht ob ich zu euch passe? Weiß ich auch nicht. Finden wir es heraus!</h1>
+<h2>Ok! Erstmal zu den wichtigen Fragen.</h2>
+
+<div ng-class="row">
+	
+	<h4>Mögt ihr Fussball?</h4>
+	<md-switch ng-model="data.fussball" aria-label="Football">
+		{{data.fussball ? 'Ja' : 'Nein'}}
+	</md-switch>
+</div>   
+
+<div ng-if="data.fussball" ng-class="row">
+    <h4>FC Bayern?</h4>
+	<md-radio-group ng-model="data.fcb">
+      <md-radio-button value="10">Alles Bayern Fans hier</md-radio-button>
+      <md-radio-button value="5">Neutral</md-radio-button>
+      <md-radio-button value="0">Mögen wir nicht</md-radio-button>
+    </md-radio-group>
+	
+    <h4>Spielt ihr ab und zu Fussball?</h4>
+	<md-switch ng-model="data.watch" aria-label="Watch">
+		{{data.watch ? 'Ja' : 'Nein'}}
+	</md-switch>
+	</div>
+
+	<div ng-class="row">
+	<h4>Zu eurer Büroausstattung gehört:</h4>
+	<md-checkbox ng-model="data.ps" aria-label="Playstation">
+	    eine Playstation
+  	</md-checkbox>
+  	<md-checkbox ng-model="data.xbox" aria-label="XBox">
+	    eine XBox
+  	</md-checkbox>
+  	<md-checkbox ng-model="data.kicker" aria-label="Kickertisch">
+	    ein Kickertisch
+  	</md-checkbox>
+  	<md-checkbox ng-model="data.chill" aria-label="Chill area">
+	    eine Chill area
+  	</md-checkbox>
+  	<md-checkbox ng-model="data.sleep" aria-label="Nickerchen">
+  		ein Raum für Nickerchen
+  	</md-checkbox>
+</div>
+
+<div ng-class="row">
+	<h4>Euer Kaffee ist:</h4>
+	<md-radio-group ng-model="data.coffee">
+		<md-radio-button value="10">Super</md-radio-button>
+		<md-radio-button value="5">Geht so</md-radio-button>
+		<md-radio-button value="0">Bäh!</md-radio-button>
+    </md-radio-group>
+</div> 
+
+	<h2>Ach ja! Wie schaut's denn fachlich so aus?</h2>
+
+<div ng-class="row">
+	<h4>Wie gefällt euch AngularJS?</h4>
+  	<md-slider-container>
+		<md-slider flex min="0" max="10" ng-model="data.angular" aria-label="angular"></md-slider>
+  	</md-slider-container>
+</div>
+
+<div ng-class="row">
+		<h4>Arbeitet ihr schon mit Angular2?</h4>
+	<md-switch ng-model="data.angular2" aria-label="Angular2">
+		{{angular2 ? 'Ja' : 'Nein'}}
+	</md-switch>
+</div>
+
+<div ng-class="row">
+	<h4>Wie gefällt euch ReactJS?</h4>
+  	<md-slider-container>			
+		<md-slider flex min="0" max="10" ng-model="data.react" aria-label="react"></md-slider>
+  	</md-slider-container>
+</div>
+
+<div ng-class="row">
+	<h4>Ihr programmiert primär mit:</h4>
+	<md-checkbox ng-model="data.es5" aria-label="ES5">
+	    ECMAScript 5
+  	</md-checkbox>
+  	<md-checkbox ng-model="data.es6" aria-label="ES6">
+	    ECMAScript 6
+  	</md-checkbox>
+  	<md-checkbox ng-model="data.ts" aria-label="Typescript">
+	    Typescript
+  	</md-checkbox>      	
+</div>
+
+<div ng-class="row">
+	<h4>Ihr experimentiert regelmäßig mit neuen Frontend Trends?</h4>
+	<md-switch ng-model="data.experiment" aria-label="Experiment">
+		{{experiment ? 'Ja' : 'Nein'}}
+	</md-switch>
+</div>
+
+<hr>
+
+<md-content>
+	<md-button ng-click="save()" class="md-raised md-primary">Zum Ergebnis</md-button>
+</md-content>

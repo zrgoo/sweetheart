@@ -1,0 +1,55 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto';
+
+$mainFont: 'Roboto', sans-serif;
+$borderColor: #5f6669;
+
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: $mainFont;
+  background: #1e2021;
+  color: #e8e8e8
+}
+
+h2 {
+  border-bottom: thin solid $borderColor;
+  padding: 5px 0
+}
+
+hr {
+  border: none;
+  border-bottom: thin solid $borderColor;
+}
+
+.container {    
+  max-width: 600px;
+  padding: 1em;
+  margin: 0 auto;
+
+  md-content {
+    background: none
+  }
+
+  csatch-me {
+    position: relative;
+    display: block;
+    border: 5px solid $borderColor;
+    width: 100%;
+    height: 500px
+  }
+  
+  .header {
+    padding-top: 2em;
+    text-align: center;
+
+    .photo {
+      border-radius: 50%;
+      display: inline-block
+    }
+  }
+
+  .result {
+    font-size: 6em;
+    padding: 1em 0
+  }
+}
