@@ -1,7 +1,13 @@
-<h1>Ergebnis</h1>
+<div class="result">Wir passen zu {{result}}% zusammen</div>
 
-<div class="result">{{result}}%</div>
-  
+<div ng-if="result >= 50">
+	Schaut doch ganz gut aus!
+</div>
+
+<div ng-if="result < 50">
+	Noch ein Versuch vielleicht?
+</div>
+
 <hr>
 
 <md-content>
